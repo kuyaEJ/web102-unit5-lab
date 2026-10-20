@@ -25,7 +25,8 @@ function App() {
       <h1>Top Coins by Market Cap</h1>
       <input placeholder='Search...'/>
         {list && list?.map((coin) => (
-          <CoinInfo 
+           <CoinInfo
+            key={coin.id}
             id={coin.id}
             image={coin.image}
             name={coin.name}
