@@ -2,9 +2,10 @@ const CoinInfo = ({id, image, name, symbol, price}) => {
   return (
     <>
     {price != null ? (
-      <li className="main-list" key={`item${id}`}>
-        <img key={`image${id}`}className="img" src={image} alt={`Coin image for ${symbol}`} key={id}/>
-        <strong key={`bold${id}`}>{name}</strong> Price: ${price} USD
+      <li className="main-list">
+        <img className="coinImage" src={image} alt={`Coin image for ${symbol}`}/>
+        <div className="coinName">{name}</div>
+        <div className="coinPrice">Price: ${price} USD</div>
       </li>
       ) : (
         <></>
